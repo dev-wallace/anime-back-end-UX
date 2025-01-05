@@ -1,4 +1,4 @@
-package dev.wallace.animeUX;
+package dev.wallace.animeux;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
