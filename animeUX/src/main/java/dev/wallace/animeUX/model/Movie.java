@@ -27,7 +27,15 @@ public class Movie {
         @NotBlank(message = "A imagem não pode estar vazia.")
         private String backgroundImage;
 
+        private String  thumbnailImage;
 
+        public String getThumbnailImage() {
+                return thumbnailImage;
+            }
+            
+            public void setThumbnailImage(String thumbnailImage) {
+                this.thumbnailImage = thumbnailImage;
+            }
 
 
         public String getBackgroundImage() {
@@ -105,14 +113,17 @@ public class Movie {
         @Column(nullable = false)
         private Double duration;
 
+
         public Movie(Long id, @NotBlank(message = "O título não pode estar vazio.") String title,
-        @NotBlank(message = "A descricao não pode estar vazia.") String description,
-        @NotBlank(message = "A imagem não pode estar vazia.") String backgroundImage,
-        Integer release_year, String genre, String director, Double rating, Double duration) {
+                        @NotBlank(message = "A descricao não pode estar vazia.") String description,
+                        @NotBlank(message = "A imagem não pode estar vazia.") String backgroundImage,
+                        String thumbnailImage, Integer release_year, String genre, String director, Double rating,
+                        Double duration) {
                 this.id = id;
                 this.title = title;
                 this.description = description;
                 this.backgroundImage = backgroundImage;
+                this.thumbnailImage = thumbnailImage;
                 this.release_year = release_year;
                 this.genre = genre;
                 this.director = director;

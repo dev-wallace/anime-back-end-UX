@@ -57,7 +57,17 @@ public class MovieDTO {
     }
 
     private String backgroundImage;
+    
+    private String thumbnailImage;
 
+    
+    public String getThumbnailImage() {
+        return thumbnailImage;
+    }
+    
+    public void setThumbnailImage(String thumbnailImage) {
+        this.thumbnailImage = thumbnailImage;
+    }
 
     public String getBackgroundImage() {
         return backgroundImage;
@@ -65,18 +75,19 @@ public class MovieDTO {
     public void setBackgroundImage(String backgroundImage) {
         this.backgroundImage = backgroundImage;
     }
-    public MovieDTO(String title, String description, Integer release_year, String genre,
-             String director, Double rating, Double duration, String backgroundImage) {
-    this.title = title;
-    this.description = description;
-    this.release_year = release_year;
-    this.genre = genre;
-    this.director = director;
-    this.rating = rating;
-    this.duration = duration;
-    this.backgroundImage = backgroundImage;
-}
-    
+
+    public MovieDTO(String title, String description, Integer release_year, String genre, String director,
+            Double rating, Double duration, String backgroundImage, String thumbnailImage) {
+        this.title = title;
+        this.description = description;
+        this.release_year = release_year;
+        this.genre = genre;
+        this.director = director;
+        this.rating = rating;
+        this.duration = duration;
+        this.backgroundImage = backgroundImage;
+        this.thumbnailImage = thumbnailImage;
+    }
     public MovieDTO(){
 
     }
