@@ -28,7 +28,8 @@ public class MovieService {
                         movie.getGenre(),
                         movie.getDirector(),
                         movie.getRating(),
-                        movie.getDuration()))
+                        movie.getDuration(),
+                        movie.getBackgroundImage()))
                 .collect(Collectors.toList());
     }
 }

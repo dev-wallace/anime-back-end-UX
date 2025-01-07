@@ -55,17 +55,27 @@ public class MovieDTO {
     public void setDuration(Double duration) {
         this.duration = duration;
     }
-    public MovieDTO(String title, String description, Integer release_year, String genre, String director,
-            Double rating, Double duration) {
-        
-        this.title = title;
-        this.description = description;
-        this.release_year = release_year;
-        this.genre = genre;
-        this.director = director;
-        this.rating = rating;
-        this.duration = duration;
+
+    private String backgroundImage;
+
+
+    public String getBackgroundImage() {
+        return backgroundImage;
     }
+    public void setBackgroundImage(String backgroundImage) {
+        this.backgroundImage = backgroundImage;
+    }
+    public MovieDTO(String title, String description, Integer release_year, String genre,
+             String director, Double rating, Double duration, String backgroundImage) {
+    this.title = title;
+    this.description = description;
+    this.release_year = release_year;
+    this.genre = genre;
+    this.director = director;
+    this.rating = rating;
+    this.duration = duration;
+    this.backgroundImage = backgroundImage;
+}
     
     public MovieDTO(){
 
