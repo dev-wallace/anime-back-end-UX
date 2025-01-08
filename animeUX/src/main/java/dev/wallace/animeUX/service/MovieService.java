@@ -85,6 +85,11 @@ public class MovieService {
                 movie.getLogo());
     }
 
-    
+    public void deleteMovie(Long id) {
+        if (!movieRepository.existsById(id)) {
+            throw new RuntimeException("Movie with ID " + id + " not found");
+        }
+        movieRepository.deleteById(id);
+    }
     
 }
