@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 
 import dev.wallace.animeux.dto.MovieDTO;
+import dev.wallace.animeux.exception.MovieNotFoundException;
 import dev.wallace.animeux.model.Movie;
 import dev.wallace.animeux.repository.MovieRepository;
 
@@ -71,7 +72,7 @@ public class MovieService {
     }
 
     public MovieDTO getMovieById(Long id) {
-        Movie movie = movieRepository.findById(id).orElseThrow();
+         Movie movie = movieRepository.findById(id).orElseThrow(() -> new MovieNotFoundException("Movie with ID " + id + " not found"));
         return new MovieDTO(
                 movie.getTitle(),
                 movie.getDescription(),
