@@ -37,15 +37,26 @@ public class MovieService {
     }
 
 
-    public MovieDTO createMovie(MovieDTO movieDTO){
+    public MovieDTO createMovie(MovieDTO movieDTO) {
+        
         Movie movie = new Movie();
+        
+       
         movie.setTitle(movieDTO.getTitle());
         movie.setDescription(movieDTO.getDescription());
         movie.setThumbnailImage(movieDTO.getThumbnailImage());
         movie.setBackgroundImage(movieDTO.getBackgroundImage());
         movie.setLogo(movieDTO.getLogo());
+        movie.setRelease_year(movieDTO.getRelease_year());
+        movie.setGenre(movieDTO.getGenre());
+        movie.setDirector(movieDTO.getDirector());
+        movie.setRating(movieDTO.getRating());
+        movie.setDuration(movieDTO.getDuration());
+        
+       
         movieRepository.save(movie);
         
+       
         return new MovieDTO(
                 movie.getTitle(),
                 movie.getDescription(),
@@ -57,7 +68,6 @@ public class MovieService {
                 movie.getBackgroundImage(),
                 movie.getThumbnailImage(),
                 movie.getLogo());
-        
-
     }
+    
 }
