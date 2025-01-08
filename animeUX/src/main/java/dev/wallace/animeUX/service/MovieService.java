@@ -69,5 +69,22 @@ public class MovieService {
                 movie.getThumbnailImage(),
                 movie.getLogo());
     }
+
+    public MovieDTO getMovieById(Long id) {
+        Movie movie = movieRepository.findById(id).orElseThrow();
+        return new MovieDTO(
+                movie.getTitle(),
+                movie.getDescription(),
+                movie.getRelease_year(),
+                movie.getGenre(),
+                movie.getDirector(),
+                movie.getRating(),
+                movie.getDuration(),
+                movie.getBackgroundImage(),
+                movie.getThumbnailImage(),
+                movie.getLogo());
+    }
+
+    
     
 }
