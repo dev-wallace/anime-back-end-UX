@@ -37,6 +37,16 @@ public class MovieCarouselService {
         
     }
 
+    public void deleteMovieCarousel(Long id) {
+
+        if (!movieCarouselRepository.existsById(id)) {
+            throw new RuntimeException("MovieCarousel with ID " + id + " not found");
+            
+        }
+
+        movieCarouselRepository.deleteById(id);
+    }
+
      
 
 }
