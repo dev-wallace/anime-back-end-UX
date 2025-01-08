@@ -29,6 +29,18 @@ public class Movie {
 
         private String  thumbnailImage;
 
+        private String logo;
+
+        
+
+        public String getLogo() {
+                return logo;
+        }
+
+        public void setLogo(String logo) {
+                this.logo = logo;
+        }
+
         public String getThumbnailImage() {
                 return thumbnailImage;
             }
@@ -115,21 +127,22 @@ public class Movie {
 
 
         public Movie(Long id, @NotBlank(message = "O título não pode estar vazio.") String title,
-                        @NotBlank(message = "A descricao não pode estar vazia.") String description,
-                        @NotBlank(message = "A imagem não pode estar vazia.") String backgroundImage,
-                        String thumbnailImage, Integer release_year, String genre, String director, Double rating,
-                        Double duration) {
-                this.id = id;
-                this.title = title;
-                this.description = description;
-                this.backgroundImage = backgroundImage;
-                this.thumbnailImage = thumbnailImage;
-                this.release_year = release_year;
-                this.genre = genre;
-                this.director = director;
-                this.rating = rating;
-                this.duration = duration;
-        }
+        @NotBlank(message = "A descricao não pode estar vazia.") String description,
+        @NotBlank(message = "A imagem não pode estar vazia.") String backgroundImage,
+        String thumbnailImage, String logo, Integer release_year, String genre, String director,
+        Double rating, Double duration) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.backgroundImage = backgroundImage;
+        this.thumbnailImage = thumbnailImage;
+        this.logo = logo;
+        this.release_year = release_year;
+        this.genre = genre;
+        this.director = director;
+        this.rating = rating;
+        this.duration = duration;
+}
 
         public Movie() {
         }
