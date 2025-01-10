@@ -5,6 +5,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import dev.wallace.animeux.dto.MovieDTO;
 import dev.wallace.animeux.service.MovieService;
+
+import java.util.List;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -25,6 +28,15 @@ public class MoviesController {
         MovieDTO result = movieService.getMovieById(id);
         return result;
     }
+
+    @GetMapping
+    public List<MovieDTO> findAll(){
+       var result = movieService.getAllMovies();
+
+        return result;
+    }
+
+
     }
     
 
