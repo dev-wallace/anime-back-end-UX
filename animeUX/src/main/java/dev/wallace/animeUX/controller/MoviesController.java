@@ -28,9 +28,14 @@ public class MoviesController {
 
 
     @GetMapping(value = "/{id}")
-    public MovieDTO getMovieById (@PathVariable Long id){
+    public ResponseEntity<?> getMovieById (@PathVariable Long id){
+       try {
         MovieDTO result = movieService.getMovieById(id);
-        return result;
+        return ResponseEntity.ok(result);
+       } catch (Exception e) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+            .body("Erro: Filme com ID " + id + " não encontrado.");
+       }
     }
 
     @GetMapping
