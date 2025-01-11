@@ -8,6 +8,10 @@ import dev.wallace.animeux.service.MovieService;
 
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -36,6 +40,16 @@ public class MoviesController {
         return result;
     }
 
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<String> deleteMovie(@PathVariable Long id) {
+        try {
+            movieService.deleteMovie(id);
+            return ResponseEntity.ok("Filme deletado com sucesso!");
+        } catch (RuntimeException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+            .body("Erro: Filme com ID " + id + " não encontrado.");
+        }
+    }
 
     }
     
