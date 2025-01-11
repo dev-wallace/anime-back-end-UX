@@ -2,14 +2,10 @@ package dev.wallace.animeux.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import dev.wallace.animeux.dto.MovieDTO;
 import dev.wallace.animeux.service.MovieService;
-
 import java.util.List;
-
 import org.springframework.http.HttpStatus;
-
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -39,7 +35,7 @@ public class MoviesController {
     }
 
     @GetMapping
-    public List<MovieDTO> findAll(){
+    public List<MovieDTO> getAllMovies(){
        var result = movieService.getAllMovies();
 
         return result;
