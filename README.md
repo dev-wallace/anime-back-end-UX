@@ -79,7 +79,7 @@ Gerencia os itens do carrossel de filmes na aplicação.
 
 1. Clone o repositório:
    ```bash
-   git clone <URL_DO_REPOSITORIO>
+   git clone https://github.com/dev-wallace/anime-back-end-UX.git
    ```
 
 2. Configure o banco de dados MySQL:
@@ -146,7 +146,9 @@ Sinta-se à vontade para contribuir com melhorias, novas funcionalidades ou corr
 ## Contato/autor
 
 Wallace Araujo  
+
 E-mail: wallacewwc2015wwk@gmail.com
+
 LinkedIn:https://www.linkedin.com/in/wallace-d-araujo/
 
 ---
