@@ -134,6 +134,9 @@ Adicione aqui uma captura de tela do código ou da aplicação:
 
 ![Screenshot](https://github.com/user-attachments/assets/5a02fada-3bb3-4381-b926-58358a340fdc)
 
+![diagrama anime ux](https://github.com/user-attachments/assets/d798e6cf-754f-4c4a-9d10-e34526abaabf)
+
+
 
 ---
 
